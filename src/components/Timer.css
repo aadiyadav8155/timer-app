@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.timer-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Soft Neumorphic Background */
+  background: #e0e5ec;
+  font-family: 'Poppins', sans-serif;
+}
+
+.timer-box {
+  width: 380px;
+  padding: 40px 30px;
+  background: #e0e5ec;
+  border-radius: 30px;
+  /* Neumorphism pop-out shadow effect */
+  box-shadow: 12px 12px 24px rgba(163, 177, 198, 0.7), 
+              -12px -12px 24px rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.timer-box h2 {
+  color: #4a5568;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  margin-top: 5px;
+  color: #a0aec0;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.timer-display {
+  margin: 40px 0;
+  padding: 30px 15px;
+  background: #e0e5ec;
+  border-radius: 20px;
+  /* Neumorphism inset shadow for a "sunken screen" look */
+  box-shadow: inset 8px 8px 16px rgba(163, 177, 198, 0.6), 
+              inset -8px -8px 16px rgba(255, 255, 255, 0.8);
+  color: #ff6b6b;
+  font-size: 55px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 3px;
+}
+
+.timer-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.timer-buttons button {
+  width: 80px;
+  height: 80px;
+  border: none;
+  border-radius: 50%; /* Circular physical buttons */
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  background: #e0e5ec;
+  color: #4a5568;
+  transition: all 0.2s ease-in-out;
+  /* Physical button pop-out shadow */
+  box-shadow: 6px 6px 12px rgba(163, 177, 198, 0.6), 
+              -6px -6px 12px rgba(255, 255, 255, 0.9);
+}
+
+.start-btn {
+  color: #20bf6b;
+}
+
+.stop-btn {
+  color: #f7b731;
+}
+
+.reset-btn {
+  color: #eb3b5a;
+}
+
+/* Button Press Effect (Inset Shadow) */
+.timer-buttons button:active {
+  box-shadow: inset 5px 5px 10px rgba(163, 177, 198, 0.7), 
+              inset -5px -5px 10px rgba(255, 255, 255, 0.9);
+  transform: scale(0.95);
+}
+
+@media (max-width: 400px) {
+  .timer-box {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .timer-display {
+    font-size: 45px;
+  }
+
+  .timer-buttons button {
+    width: 70px;
+    height: 70px;
+    font-size: 12px;
+  }
+}
